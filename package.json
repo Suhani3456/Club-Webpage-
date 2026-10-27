@@ -1,0 +1,32 @@
+{
+  "name": "coding-club",
+  "version": "1.0.0",
+  "description": "College coding club website: Express + MongoDB backend, Excel-driven content, plain HTML/CSS/JS frontend.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "seed": "node scripts/seed-excel.js",
+    "test-email": "node scripts/test-email.js",
+    "test": "node tests/auth-ui.test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.4.5",
+    "exceljs": "^4.4.0",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.4.0",
+    "express-validator": "^7.1.0",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.5.0",
+    "nodemailer": "^6.9.13"
+  },
+  "devDependencies": {
+    "jsdom": "^29.1.1"
+  }
+}

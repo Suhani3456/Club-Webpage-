@@ -1,0 +1,13 @@
+node_modules/
+.env
+data/signups.xlsx
+*.log
+.DS_Store
+
+cookies_jar.txt
+
+# Local MongoDB database files
+data/mongodb/
+
+# Excel temporary and lock files
+data/~$*.xlsx

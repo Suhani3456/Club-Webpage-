@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coding Club – Build, Learn, Compete</title>
+  <meta name="description" content="A student coding club that builds real projects, runs workshops and hosts hackathons.">
+  <meta name="theme-color" content="#f4efe4">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23f4efe4'/%3E%3Crect x='5' y='9' width='15' height='14' fill='none' stroke='%232a2520' stroke-width='2' stroke-dasharray='3 2'/%3E%3Crect x='13' y='13' width='14' height='6' fill='%23e0502a'/%3E%3C/svg%3E">
+  <script src="head.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <div class="wrap header-row">
+      <a class="brand" href="#top" aria-label="Coding Club, back to top">
+        <svg class="brand-mark" viewBox="0 0 32 24" aria-hidden="true" focusable="false">
+          <rect x="1" y="1" width="18" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="3 2"/>
+          <rect x="10" y="8" width="21" height="8" fill="var(--signal)"/>
+        </svg>
+        Coding Club
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a class="tab" href="#about">About</a>
+        <a class="tab" href="#projects">Projects</a>
+        <a class="tab" href="#events">Events</a>
+        <button class="btn btn-line btn-sm" id="login-btn" type="button" hidden>Log in</button>
+        <span class="meta" id="user-name" hidden></span>
+        <button class="btn btn-line btn-sm" id="logout-btn" type="button" hidden>Log out</button>
+        <a class="btn btn-ink btn-sm" href="#join">Join</a>
+      </nav>
+      <button class="btn btn-line btn-sm nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">Menu</button>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Main" hidden>
+      <ul class="wrap">
+        <li><a href="#about"><span class="meta">01</span>About</a></li>
+        <li><a href="#projects"><span class="meta">02</span>Projects</a></li>
+        <li><a href="#events"><span class="meta">03</span>Events</a></li>
+        <li><a href="#join"><span class="meta">04</span>Join the club</a></li>
+        <li><button id="login-btn-mobile" type="button" hidden>Log in</button></li>
+        <li><button id="logout-btn-mobile" type="button" hidden>Log out</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero graph" aria-labelledby="hero-title">
+      <div class="wrap hero-wrap">
+        <div class="hero-strip meta">
+          <span>Student coding club</span>
+          <span class="hide-sm">Projects · Workshops · Hackathons</span>
+          <span>CS Block, Lab 204</span>
+        </div>
+
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <h1 id="hero-title" class="display-xl">Build things that outlast the <span class="overflow-word">semester.</span></h1>
+            <p class="lead">We're a student coding club. We ship real projects, teach each other in weekly workshops, and run hackathons where first-years and final-years work on the same team.</p>
+            <div class="cta-row">
+              <a class="btn btn-ink" href="#join">Join the club <span class="arrow" aria-hidden="true">→</span></a>
+              <a class="btn btn-line" href="#projects">See what we've built</a>
+            </div>
+          </div>
+
+          <aside class="hero-ticket" aria-label="Next meetup">
+            <div class="ticket">
+              <div class="ticket-main">
+                <p class="meta live"><span class="live-dot" aria-hidden="true"></span>Next meetup</p>
+                <h2 id="ticket-title"></h2>
+                <dl class="ticket-facts">
+                  <dt class="meta">When</dt><dd id="ticket-when"></dd>
+                  <dt class="meta">Where</dt><dd id="ticket-where"></dd>
+                  <dt class="meta">Bring</dt><dd id="ticket-bring"></dd>
+                </dl>
+              </div>
+              <div class="ticket-tear">
+                <span class="meta muted">Admit · all years</span>
+                <a class="ink-link strong" href="#events">View all events</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="wrap split">
+        <div class="reveal about-head">
+          <p class="label"><span class="label-n">01</span><span class="label-line" aria-hidden="true"></span><span>About</span></p>
+          <h2 id="about-title" class="display-lg">A club for people who learn by making.</h2>
+        </div>
+        <div class="about-body">
+          <p class="reveal about-lead">We started this club because lectures teach you how things work, and projects teach you why they break. Every semester we pick a few ideas, form small teams, and see them through to something people can actually use.</p>
+          <ul class="reveal pillars">
+            <li><span class="meta signal">01</span><strong>Build</strong><span class="muted">Team projects with code reviews and real deadlines.</span></li>
+            <li><span class="meta signal">02</span><strong>Teach</strong><span class="muted">Weekly workshops led by members, not guest speakers.</span></li>
+            <li><span class="meta signal">03</span><strong>Compete</strong><span class="muted">Hackathons and capture-the-flag nights, beginners welcome.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section projects-section" id="projects" aria-labelledby="projects-title">
+      <div class="wrap">
+        <div class="reveal section-head">
+          <div>
+            <p class="label"><span class="label-n">02</span><span class="label-line" aria-hidden="true"></span><span>Projects</span></p>
+            <h2 id="projects-title" class="display-lg">Projects</h2>
+          </div>
+          <p class="meta muted" id="project-count" aria-live="polite">Showing 5 of 5</p>
+        </div>
+
+        <div class="reveal filters" role="group" aria-label="Filter projects">
+          <button class="tab" type="button" data-filter="all" aria-pressed="true">All<sup></sup></button>
+          <button class="tab" type="button" data-filter="web" aria-pressed="false">Web<sup></sup></button>
+          <button class="tab" type="button" data-filter="ai" aria-pressed="false">AI / ML<sup></sup></button>
+          <button class="tab" type="button" data-filter="security" aria-pressed="false">Security<sup></sup></button>
+          <button class="tab" type="button" data-filter="hardware" aria-pressed="false">Hardware<sup></sup></button>
+        </div>
+
+        <ol class="projects" id="project-list" aria-label="Club projects"></ol>
+        <p id="empty" class="empty muted" hidden>Nothing here yet. Pitch a project at the next meetup.</p>
+      </div>
+    </section>
+
+    <!-- EVENTS -->
+    <section class="section events-section" id="events" aria-labelledby="events-title">
+      <div class="wrap split">
+        <div class="reveal events-head">
+          <div class="sticky">
+            <p class="label"><span class="label-n">03</span><span class="label-line" aria-hidden="true"></span><span>Events</span></p>
+            <h2 id="events-title" class="display-lg">Events</h2>
+            <p class="sub">Select an event to see the details.</p>
+          </div>
+        </div>
+        <ol class="reveal timeline" id="timeline" aria-label="Club events"></ol>
+        <p id="events-empty" class="sub" hidden>Nothing on the calendar yet. Check back at the next meetup.</p>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats" aria-label="Club in numbers">
+      <div class="wrap stats-grid" id="stats-grid"></div>
+    </section>
+
+    <!-- JOIN -->
+    <section class="section join graph" id="join" aria-labelledby="join-title">
+      <div class="wrap split">
+        <div class="reveal join-head">
+          <p class="label"><span class="label-n">04</span><span class="label-line" aria-hidden="true"></span><span>Join</span></p>
+          <h2 id="join-title" class="display-lg">Come build with us.</h2>
+          <p class="join-sub muted">No experience needed. Tell us a little about yourself and we'll send the next meetup details.</p>
+          <p class="muted">Prefer email? <a class="ink-link strong ink" href="mailto:hello@example.com">hello@example.com</a></p>
+        </div>
+
+        <div class="reveal join-sheet">
+          <div class="sheet">
+            <div class="sheet-top meta"><span>Membership sheet</span><span class="muted">Takes a minute</span></div>
+
+            <form id="form" novalidate>
+              <div class="field">
+                <label for="name" class="meta"><span>Full name</span></label>
+                <input class="sheet-field" id="name" name="name" type="text" autocomplete="name" required>
+                <span class="err" id="name-err" hidden></span>
+              </div>
+              <div class="field">
+                <label for="email" class="meta"><span>College email</span></label>
+                <input class="sheet-field" id="email" name="email" type="email" inputmode="email" autocomplete="email" required>
+                <span class="err" id="email-err" hidden></span>
+              </div>
+              <div class="field">
+                <label for="year" class="meta"><span>Year of study</span></label>
+                <select class="sheet-field is-empty" id="year" name="year" required>
+                  <option value="">Choose your year</option>
+                  <option>First year</option><option>Second year</option><option>Third year</option><option>Fourth year</option>
+                </select>
+                <span class="err" id="year-err" hidden></span>
+              </div>
+              <div class="field">
+                <label for="msg" class="meta"><span>What do you want to build?</span><span class="hint">Optional</span></label>
+                <textarea class="sheet-field" id="msg" name="msg" rows="3"></textarea>
+              </div>
+              <div class="form-foot">
+                <button class="btn btn-ink" type="submit">Send my details <span class="arrow" aria-hidden="true">→</span></button>
+                <p class="form-alert" id="form-alert" role="alert"></p>
+              </div>
+            </form>
+
+            <div class="done fade-in" id="done" role="status" hidden>
+              <p class="meta ok">Received</p>
+              <h3 id="done-title" tabindex="-1"></h3>
+              <p class="muted" id="done-text"></p>
+              <button class="btn btn-line btn-sm" type="button" id="again">Sign up someone else</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap foot-grid">
+      <p class="foot-line">Coding Club, built by students, for students.</p>
+      <nav class="foot-nav" aria-label="Footer">
+        <ul>
+          <li><a class="ink-link" href="#about">About</a></li>
+          <li><a class="ink-link" href="#projects">Projects</a></li>
+          <li><a class="ink-link" href="#events">Events</a></li>
+        </ul>
+        <ul>
+          <li><a class="ink-link" href="https://github.com" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a></li>
+          <li><a class="ink-link" href="https://www.instagram.com" target="_blank" rel="noopener">Instagram <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a></li>
+        </ul>
+      </nav>
+      <p class="small">&copy; <span id="year-now">2026</span> Coding Club. Fonts: Archivo, IBM Plex Sans and IBM Plex Mono (SIL Open Font License).</p>
+    </div>
+    <!-- Bookend to the hero: the wordmark doesn't fit, and this time it's clipped. -->
+    <div class="wrap wordmark-wrap" aria-hidden="true">
+      <span class="wordmark-tag">overflow: hidden</span>
+      <p class="wordmark">C<span>o</span>ding Club</p>
+    </div>
+  </footer>
+
+  <!-- LOGIN / SIGN UP -->
+  <div class="auth-overlay" id="auth-overlay" hidden>
+    <div class="sheet auth-sheet" role="dialog" aria-modal="true" aria-labelledby="auth-title">
+      <div class="sheet-top meta">
+        <span id="auth-title">Club account</span>
+        <button class="btn btn-line btn-sm" id="auth-close" type="button">Close</button>
+      </div>
+
+      <form id="auth-form" novalidate>
+        <div class="auth-tabs" role="group" aria-label="Log in or sign up">
+          <button class="tab" type="button" data-auth-mode="login" aria-pressed="true">Log in</button>
+          <button class="tab" type="button" data-auth-mode="signup" aria-pressed="false">Sign up</button>
+        </div>
+
+        <div class="field">
+          <label for="auth-name" class="meta"><span>Full name</span><span class="hint signup-only" hidden>Signup only</span></label>
+          <input class="sheet-field" id="auth-name" name="name" type="text" autocomplete="name">
+          <span class="err" id="auth-name-err" hidden></span>
+        </div>
+        <div class="field">
+          <label for="auth-email" class="meta"><span>College email</span></label>
+          <input class="sheet-field" id="auth-email" name="email" type="email" inputmode="email" autocomplete="email" required>
+          <span class="err" id="auth-email-err" hidden></span>
+        </div>
+        <div class="field">
+          <label for="auth-password" class="meta"><span id="auth-password-label">Password</span><span class="hint signup-only" hidden>Min 8 characters</span></label>
+          <input class="sheet-field" id="auth-password" name="password" type="password" autocomplete="current-password" required>
+          <span class="err" id="auth-password-err" hidden></span>
+          <button type="button" class="ink-link" id="forgot-link" hidden>Forgot password? We'll email a reset link.</button>
+        </div>
+        <div class="field" id="auth-code-field" hidden>
+          <label for="auth-code" class="meta"><span>6-digit code</span><span class="hint">Sent to your email</span></label>
+          <input class="sheet-field" id="auth-code" name="code" inputmode="numeric" autocomplete="one-time-code" maxlength="6">
+          <span class="err" id="auth-code-err" hidden></span>
+          <button type="button" class="ink-link" id="resend-link" hidden>Resend code</button>
+        </div>
+        <div class="form-foot">
+          <button class="btn btn-ink" type="submit" id="auth-submit">Log in <span class="arrow" aria-hidden="true">→</span></button>
+          <p class="form-alert" id="auth-alert" role="alert"></p>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

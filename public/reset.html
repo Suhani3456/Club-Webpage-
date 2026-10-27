@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reset password – Coding Club</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#f4efe4">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="reset-page">
+    <div class="sheet reset-card">
+      <div class="sheet-top meta"><span>Club account</span><span class="muted">Password reset</span></div>
+
+      <form id="reset-form" novalidate>
+        <p class="meta muted" id="reset-lead">Choose your new password below.</p>
+
+        <div class="field">
+          <label for="new-password" class="meta"><span>New password</span><span class="hint">Min 8 characters</span></label>
+          <input class="sheet-field" id="new-password" name="password" type="password" autocomplete="new-password" required>
+          <span class="err" id="new-password-err" hidden></span>
+        </div>
+        <div class="field">
+          <label for="confirm-password" class="meta"><span>Confirm password</span></label>
+          <input class="sheet-field" id="confirm-password" name="confirm" type="password" autocomplete="new-password" required>
+          <span class="err" id="confirm-password-err" hidden></span>
+        </div>
+
+        <div class="form-foot">
+          <button class="btn btn-ink" type="submit" id="reset-submit">Update password <span class="arrow" aria-hidden="true">→</span></button>
+          <p class="form-alert" id="reset-alert" role="alert"></p>
+        </div>
+      </form>
+
+      <div class="done" id="reset-done" role="status" hidden>
+        <p class="meta ok">Updated</p>
+        <h3>Your password is changed.</h3>
+        <p class="muted">Head back to the club site and log in with the new one.</p>
+        <a class="btn btn-ink" href="/">Back to the site <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+
+      <div class="done" id="reset-broken" role="alert" hidden>
+        <p class="meta form-alert">Link problem</p>
+        <h3 class="ink">That link doesn't work.</h3>
+        <p class="muted">Reset links work once and for 15 minutes. Go back to the site, use “Forgot password?” again and we'll send a fresh link to your email.</p>
+        <a class="btn btn-ink" href="/">Back to the site <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </main>
+
+  <script src="reset.js"></script>
+</body>
+</html>
